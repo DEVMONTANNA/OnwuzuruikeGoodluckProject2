@@ -21,7 +21,7 @@ const DefiSwap = () => {
               </div>
               <div className="w-[28%] ttt ">
                 <button className=" items-center  tttt  justify-evenly flex bg-[#fffff]   text-[17px] mt-7 text-[black] shadow-lg  bg-white  border-[#2222220d]  border border-solid rounded-full">
-                  <img className="w-[25%] hg" src="eth.png " /> ETH{" "}
+                  <img  alt="ETH" className="w-[25%] hg" src="eth.png " /> ETH{" "}
                   <i class="fa-solid fa-caret-down"></i>
                 </button>
               </div>
@@ -65,7 +65,7 @@ const DefiSwap = () => {
                 Swapping made simple. Access thousands of tokens on 11+ chains.
               </h1>
             </div>
-            <img className="pt-[50px]" src="../IOS1.png " />
+            <img alt="I0S1" className="pt-[50px]" src="../IOS1.png " />
           </div>
 
           <div className="bg-[hsl(299,100%,90%)] w-[48%]  mb-4 rounded-3xl p-[25px] c">
@@ -76,7 +76,7 @@ const DefiSwap = () => {
             <h1 className="text-[36px] pt-3 p text-[#fc72ff]">
               The Wallet built for swapping. Available on IOS and Andriod.
             </h1>
-            <img className="pt-[38px]" src="../IOS1.png" />
+            <img alt="Uniswap Wallet" className="pt-[38px]" src="../IOS1.png" />
           </div>
           <div className="bg-[#00c3a00f] w-[48%] u  h-[300px]  mb-4 m p-[25px] pr-4 rounded-3xl c">
             <button className="bg-[#fff] font-[verdana] text-[#00c3a0]  font-bold rounded-3xl p-[10px] #00c3a0 flex gap-2 items-center">
@@ -92,7 +92,7 @@ const DefiSwap = () => {
               </div>
 
               <div className="   ">
-                <img className="w-[100%] nn" src="../open.png" />
+                <img  alt="Developer Docs" className="w-[100%] nn" src="../open.png" />
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ const DefiSwap = () => {
               </h1>
 
               <div>
-                <img className="w-[100%] nn " src="../up.png " />
+                <img alt="Developer Docs" className="w-[100%] nn " src="../up.png " />
               </div>
             </div>
           </div>

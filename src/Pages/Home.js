@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <div className=" succ z-[5000] sticky">
-         {/* <Learning/>  */}
+      
         <Header />
         <SubHeader />
       </div>
