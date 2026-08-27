@@ -14,7 +14,6 @@ const SubHeader = () => {
       }
 
       const provider = new ethers.BrowserProvider(window.ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []);
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
       const balance = await provider.getBalance(address);
@@ -26,12 +25,15 @@ const SubHeader = () => {
       console.log("Connected account:", formattedBalance);
       console.log("Connected account Transaction count:", txNum);
 
-      const setWalletData = {
-        address: address,
-        balance: formattedBalance,
-        isConnected: true,
-        transactionNO: txNum
-      };
+    const setWalletData = {
+  address: address,
+  balance: formattedBalance,
+  isConnected: true,
+  transactionNO: txNum
+};
+
+
+console.log("Wallet data ready:", setWalletData);
 
     } catch (err) {
       console.error("Error connecting wallet:", err);
