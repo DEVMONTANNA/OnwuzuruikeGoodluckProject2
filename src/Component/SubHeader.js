@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {ether} from "ethers";
+import {ethers} from "ethers";
 import "./SubHeader.css";
 import "./SubHeaderScript";
 
@@ -26,12 +26,12 @@ const SubHeader = () => {
       console.log("Connected account:", formattedBalance);
       console.log("Connected account Transaction count:", txNum);
 
-      setWalletData({
+      const setWalletData = {
         address: address,
         balance: formattedBalance,
         isConnected: true,
-        transactionNO:txNum
-      });
+        transactionNO: txNum
+      };
 
     } catch (err) {
       console.error("Error connecting wallet:", err);
