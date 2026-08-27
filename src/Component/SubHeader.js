@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {ethers} from "ethers";
 import "./SubHeader.css";
-import "./SubHeaderScript";
+
 
 const SubHeader = () => {
   const [toggle, setToggle] = useState(false);
