@@ -1,9 +1,44 @@
 import React, { useState } from "react";
+import {ether} from "ethers";
 import "./SubHeader.css";
 import "./SubHeaderScript";
 
 const SubHeader = () => {
   const [toggle, setToggle] = useState(false);
+ async function connectWallet() {
+    try {
+    
+      if (typeof window.ethereum === "undefined") {
+        alert("MetaMask not found. Please install or enable it in your browser.");
+        return;
+      }
+
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const accounts = await provider.send("eth_requestAccounts", []);
+      const signer = await provider.getSigner();
+      const address = await signer.getAddress();
+      const balance = await provider.getBalance(address);
+      const txNum = await provider.getTransactionCount("ricmoo.eth");
+      const formattedBalance = ethers.formatEther(balance);
+
+      console.log("Connected account details:", signer);
+      console.log("Connected User Address:", address);
+      console.log("Connected account:", formattedBalance);
+      console.log("Connected account Transaction count:", txNum);
+
+      setWalletData({
+        address: address,
+        balance: formattedBalance,
+        isConnected: true,
+        transactionNO:txNum
+      });
+
+    } catch (err) {
+      console.error("Error connecting wallet:", err);
+      alert("Failed to connect to MetaMask. Check console for details.");
+    }
+  }
+
   return (
     <div>
       <header className="">
@@ -51,7 +86,8 @@ const SubHeader = () => {
               Get the app
             </button>
             <i className=" world1 cursor-pointer fa-solid fa-globe"></i>
-            <button className=" connect bg-[#ffefff] text-[#fc72ff] pr-[10px] pl-[10px]  rounded-full">
+            <button
+            onClick={connectWallet} className=" connect bg-[#ffefff] text-[#fc72ff] pr-[10px] pl-[10px]  rounded-full">
               Connect
             </button>
           </div>
