@@ -3,8 +3,6 @@ import Header from "../Component/Header";
 import SubHeader from "../Component/SubHeader";
 import DefiSwap from "../Component/DefiSwap";
 import "./Home.css";
-import "./Homescript";
-import Learning from "../Component/Learning";
 import ImageScatter from "../Component/ImageScatter";
 
 const Home = () => {
